@@ -1,5 +1,3 @@
-
-import 'package:doctors_app/core/theming/colors.dart';
 import 'package:doctors_app/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
