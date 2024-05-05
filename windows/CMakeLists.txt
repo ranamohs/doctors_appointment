@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.14)
 project(doctors_appointment LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change
-# the on-disk name of your application.
+# the on_boarding-disk name of your application.
 set(BINARY_NAME "doctors_appointment")
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
@@ -60,7 +60,7 @@ include(flutter/generated_plugins.cmake)
 
 # === Installation ===
 # Support files are copied into place next to the executable, so that it can
-# run in place. This is done instead of making a separate bundle (as on Linux)
+# run in place. This is done instead of making a separate bundle (as on_boarding Linux)
 # so that building and running from within Visual Studio will work.
 set(BUILD_BUNDLE_DIR "$<TARGET_FILE_DIR:${BINARY_NAME}>")
 # Make the "install" step default, as it's required to run.
@@ -93,7 +93,7 @@ install(DIRECTORY "${NATIVE_ASSETS_DIR}"
    DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
    COMPONENT Runtime)
 
-# Fully re-copy the assets directory on each build to avoid having stale files
+# Fully re-copy the assets directory on_boarding each build to avoid having stale files
 # from a previous install.
 set(FLUTTER_ASSET_DIR_NAME "flutter_assets")
 install(CODE "
@@ -102,7 +102,7 @@ install(CODE "
 install(DIRECTORY "${PROJECT_BUILD_DIR}/${FLUTTER_ASSET_DIR_NAME}"
   DESTINATION "${INSTALL_BUNDLE_DATA_DIR}" COMPONENT Runtime)
 
-# Install the AOT library on non-Debug builds only.
+# Install the AOT library on_boarding non-Debug builds only.
 install(FILES "${AOT_LIBRARY}" DESTINATION "${INSTALL_BUNDLE_DATA_DIR}"
   CONFIGURATIONS Profile;Release
   COMPONENT Runtime)
