@@ -58,7 +58,10 @@ dependencies:
   flutter_native_splash: ^2.4.0
   #An SVG rendering and widget library for Flutter,which allows painting.
   flutter_svg: ^2.0.10+1
+  # for adapting screen and font size.
   flutter_screenutil: ^5.9.0
+  # A build system for Dart code generation
+  build_runner: ^2.4.7
 
 
 dev_dependencies:
@@ -95,7 +98,7 @@ flutter:
   # https://flutter.dev/assets-and-images/#from-packages
 
   # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
+  # in this "flutter" section.  Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:

@@ -1,7 +1,11 @@
+import 'package:doctors_app/core/di/dependancy_injection.dart';
 import 'package:doctors_app/core/routing/routes.dart';
+import 'package:doctors_app/features/home/ui/screens/home_screen.dart';
+import 'package:doctors_app/features/login/logic/login_cubit.dart';
 import 'package:doctors_app/features/login/ui/screens/login_screen.dart';
 import 'package:doctors_app/features/on_boarding/screen/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppRouter {
   static Route generateRoute(RouteSettings settings) {
@@ -16,7 +20,14 @@ class AppRouter {
 
       case Routes.loginScreen:
         return MaterialPageRoute(
-          builder: (_) => const LoginScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<LoginCubit>(),
+              child: const LoginScreen()),
+        );
+
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder: (_) => const HomeScreen(),
         );
 
 
